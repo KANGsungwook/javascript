@@ -43,7 +43,12 @@
             // console.log(list.childNodes[1]); //첫번째 li
             // list.removeChild(list.childNodes[1]);
 
-            console.log(list.children);
+            
+
+
+            if(list.children.length == 0) return;
+            
+            console.log(list.children); //순수한 앨리먼트 요소만 list형태로 얻는다.
             console.log(list.children[0]);
             list.removeChild(list.children[0]);
 
