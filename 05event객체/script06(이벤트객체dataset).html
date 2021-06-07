@@ -8,12 +8,32 @@
 </head>
 <body>
     
-    <ul>
-        <li><a href="">홍길동</a></li>
-        <li><a>이순신</a></li>
-        <li><a>홍길자</a></li>
-        <li><a>박찬호</a></li>
+    <ul class="nameList">
+        <li><a href="#" data-info='{"id": "kkk", "age": "20"}'>홍길동</a></li>
+        <li><a href="#" data-info='{"id": "kkk", "age": "20"}'>이순신</a></li>
+        <li><a href="#" data-info='{"id": "kkk", "age": "20"}'>홍길자</a></li>
+        <li><a href="#" daat-info='{"id": "kkk", "age": "20"}'>박찬호</a></li>
     </ul>
+
+    <script> //{키:값, 키:값}
+        var nameList = document.querySelector(".nameList");
+        nameList.onclick = function(){
+            event.preventDefault(); //a기본 이벤트를 중단
+            if(event.target.tagName != "A") return; //a가 아니라면 종료
+
+            // console.log(event.target.href);
+            // console.dir(event.target);
+
+            //data-xx로 저장한 속성은 dataset의 xx값으로 저장됩니다.
+            console.log(event.target.dataset.info);
+            
+            var data = JSON.parse(event.target.dataset.info);
+            console.log(data);
+
+        }   
+
+    </script>
+
 
 
 

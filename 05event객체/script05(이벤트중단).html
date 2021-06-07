@@ -21,10 +21,11 @@
     </div>
 
     <script>
+        
+
         var pageNation = document.querySelector(".pageNation");
         pageNation.onclick = function() {
             event.preventDefault(); //고유이벤트를 가진 태그의 이벤트 제거
-
             if(event.target.tagName != "A") return; //A태그가 아니라면 중지
 
             var page = event.target.innerHTML;
@@ -40,12 +41,11 @@
     </form>
 
     <script>
-        var sub = document.ElementById("sub");
+        var sub = document.getElementById("sub");
         sub.onclick = function() {
             event.preventDefault(); //submit이 가진 기본이벤트를 제거
             alert(1);
             //처리작업
-
         }
     </script>
 
