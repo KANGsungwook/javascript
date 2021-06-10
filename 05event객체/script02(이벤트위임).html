@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>이벤트위임- 부모에 이벤트를 걸어놓으면 자식태그한테도 자동으로 전파되는 특징입니다.</h3>
+    <h3>이벤트위임- 부모에 이번테를 걸어놓으면 자식태그한테도 자동으로 전파되는 특징입니다.</h3>
 
     <ul class="parent">
         <li>1. 홍길동</li>
@@ -26,17 +26,19 @@
         parent.onclick = function() {
             //이벤트 위임방식을 사용할때 부모를 클릭해도 적용되는 문제가 있습니다.
             //자식태그가 아니면 종료하는 방법으로 이벤트를 종료합니다.
-            
 
             // console.log(event.target); //이벤트를 적용한 타겟
             // console.log(event.currentTarget); //이벤트가 실제로 걸려있는 부모
-            // console.log(event.target,tagName);
+            // console.log(event.target.tagName );
             if(event.target.tagName != "LI") return; //태그가 LI가 아니라면 이벤트를 종료
-            
+
             result.innerHTML = event.target.innerHTML;
 
         }
+
     </script>
+
+    
 
 </body>
 </html>

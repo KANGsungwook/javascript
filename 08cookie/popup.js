@@ -10,7 +10,6 @@ function createCookie(name, value) {
     cookie += "expires=" + date; //쿠키시간설정
 
     document.cookie = cookie;
-
 }
 
 /* 쿠키확인 */
@@ -23,5 +22,7 @@ function getCookie(name) {
             return cookies[i].replace(" ", "").replace(name+"=", ""); //쿠키값리턴
         }
     }
+
+
 
 }

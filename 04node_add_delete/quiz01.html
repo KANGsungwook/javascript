@@ -8,7 +8,7 @@
 
     <style>
         table {border-spacing: 0; border-collapse: collapse;}
-        thead > th {
+        thead th {
             border: 1px solid #777;
         }
     </style>
@@ -42,7 +42,7 @@
 
         var tableList = document.querySelector(".tableList"); //tbody
 
-        var addList = document.getElementById("addList");
+        var addList = document.getElementById("addList")
         addList.onclick = function() {
 
             var tr = document.createElement("tr");
@@ -63,16 +63,15 @@
             td.innerHTML = '<input type="text">';
             tr.appendChild(td);
 
-            tableList.appendChild(tr); //tbody의 자식으로 tr을 추가
+            tableList.appendChild(tr); //tbody의 자식으로 tr을 추가            
 
         }
 
         //5개 버튼 이벤트
-        var addList = document.getElementById("addLists");
+        var addLists = document.getElementById("addLists");
         addLists.onclick = function() {
 
             for(var i = 1; i <= 5; i++) {
-
                 var tr = document.createElement("tr");
 
                 var td = document.createElement("td");
@@ -91,16 +90,18 @@
                 td.innerHTML = '<input type="text">';
                 tr.appendChild(td);
 
-                tableList.appendChild(tr); //tbody의 자식으로 tr을 추가
+                tableList.appendChild(tr); //tbody의 자식으로 tr을 추가            
 
             }
+
         }
 
 
 
-
-
     </script>
+
+
+
 
 </body>
 </html>

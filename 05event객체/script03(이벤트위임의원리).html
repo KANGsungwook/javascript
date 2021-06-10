@@ -24,33 +24,33 @@
     </div>
 
     <script>
-        //DOM은 이벤츠 기본동작방식은 버블링
+        //DOM은 이벤트 기본동작방식은 버블링
         //버블링 -> 부모, 자식 모두 이벤트가 걸려있을 때 이벤트가 자식~>부모로 전파되는 특징
-        //3번 클릭시 -> 2 -> 1로 전파됩니다.
+        //3번클릭시 -> 2 -> 1로 전파됩니다.
         var func1 = document.querySelector(".func1");
         var func2 = document.querySelector(".func2");
         var func3 = document.querySelector(".func3");
 
         // func1.onclick = function() {
         //     alert("func1");
-        //     event.stopPropagation();
         // }
 
         // func2.onclick = function() {
         //     alert("func2");
+        //     event.stopPropagation(); //이벤트의 버블링을 중단하는 기능.
         // }
 
         // func3.onclick = function() {
         //     alert("func3");
         // }
 
-        //캡처링 - 부모, 자식에 모두 이벤트가 걸려있을 때 이벤트가 부모 -> 자식으로 전파되는 특징
+        //캡쳐링 - 부모, 자식에 모두 이벤트가 걸려있을 때 이벤트가 부모-> 자식으로 전파되는 특징
         //addEventListener() 방식으로만 사용이 가능
-        //캡쳐링은 사용될 일이 많지 않고, 이벤트 순서가 (1 -> 2 -> 3)
+        //캡쳐링은 사용될 일이 많지 않고, 이벤트 실행 순서가 (1 -> 2 -> 3)
 
         func1.addEventListener("click", function() {
             alert("func1");
-            // event.stopPropagation(); //이벤트 캡처링을 중단.
+            //event.stopPropagation(); //이벤트 캡쳐링을 중단.
         }, true);
 
         func2.addEventListener("click", function() {
@@ -61,7 +61,10 @@
             alert("func3");
         }, true);
 
+
     </script>
+
+
 
 </body>
 </html>

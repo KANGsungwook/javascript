@@ -7,15 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>서울시 강남구 공공 WIFI 위치정보 xml로 얻어오기</h2>
+    <h2>서울시 강남구 공공WIFI 위치정보 xml로 얻어오기</h2>
 
     <script>
 
         function getFetch() {
 
-            fetch("http://openapi.seoul.go.kr:8088/726243576d73756e3130316562426359/xml/TbPublicWifiInfo_GN/1/1000/")
+            fetch("http://openapi.seoul.go.kr:8088/4356704869796f70313034687358417a/xml/TbPublicWifiInfo_GN/1/1000/")
                 .then(function(response) {
-                    return response.text();
+                    return response.text(); 
                 })
                 .then(function(text) {
                     //text문서를 -> xml문서로 변경
@@ -36,13 +36,13 @@
                         console.log(list[i].querySelector("X_SWIFI_ADRES2").innerHTML );
                         console.log(list[i].querySelector("LAT").innerHTML );
                         console.log(list[i].querySelector("LNT").innerHTML );
-
                     }
+
                 })
 
         }
 
-        (function(response) {
+        (function() {
             getFetch();
         })();
 

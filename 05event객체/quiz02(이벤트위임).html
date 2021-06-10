@@ -8,7 +8,7 @@
 
     <style>
         table {border-collapse: collapse; border-spacing: 0;}
-        td {border: 1px solid #777;}
+         td {border: 1px solid #777}
     </style>
 
 </head>
@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td>ㅋㅋㅋㅋㅋㅋㅋ</td>
+                <td>ㅋㅋㅋㅋㅋ</td>
                 <td>hello world</td>
                 <td><button type="button">삭제</button></td>
             </tr>
@@ -50,7 +50,7 @@
             </tr>
             <tr>
                 <td>5</td>
-                <td>이벤트뭐임?!</td>
+                <td>이벤트 위임!?</td>
                 <td>hello world</td>
                 <td><button type="button">삭제</button></td>
             </tr>
@@ -58,27 +58,25 @@
     </table>
 
     <script>
-        //1.다중이벤트-같은종류에 버튼에 동일 이벤트
+        //1.다중이벤트 - 같은종류에 버튼에 동일 이벤트
         // var list = document.querySelectorAll("button");
-        // for(var i = 0; i < list.length; i++) {
+        // for(var i = 0; i < list.length; i++){
         //     list[i].onclick = function() {
-                
         //         event.target.parentElement.parentElement.remove();
         //     }
-        // }
+        // };
         
         //2.이벤트위임
         var tbody = document.querySelector(".tbody");
         tbody.onclick = function() {
             if(event.target.tagName != "BUTTON") return;
-
+            
             event.target.parentElement.parentElement.remove();
         }
 
-
-
-
     </script>
+
+
 
 </body>
 </html>

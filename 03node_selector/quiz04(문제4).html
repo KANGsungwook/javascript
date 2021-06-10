@@ -8,15 +8,17 @@
 
     <style>
         .center {text-align: center;}
-        .content {width: 70%; margin: 0 auto; border: 1px solid #777;}
+        .content {width: 70%; margin: 0 auto; border: 1px solid #777; overflow: hidden;}
         .left {
             width:50%;
             float:left; /* 부모에overhidden */
             box-sizing: border-box;
         }
-        .content, left {padding: 5px;}
+        .content, .left {padding: 5px;}
         .inner {border: 1px solid #777; height: 300px; overflow: auto;}
+
     </style>
+
 
 </head>
 <body>
@@ -35,7 +37,6 @@
                 all[1].style.color = "white";
                 all[2].style.color = "white";
 
-
             }
 
             var bright = document.getElementById("bright");
@@ -47,9 +48,11 @@
                 all[0].style.color = "black";
                 all[1].style.color = "black";
                 all[2].style.color = "black";
+
             }
         }
     </script>
+
 
     <header>
         <div class="center">
@@ -66,15 +69,18 @@
                 <div class="inner">
                     <img src="img/1.jpg" width="100%" height="100%">
                 </div>
-            </div>
+            </div >
             <div class="left"><!-- 레프트 -->
                 <div class="inner">
-                    <p>자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 프로그래밍에도 사용되고 있다.</p>
+                    <p>자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 사이드 네트워크 프로그래밍에도 사용되고 있다</p>
                     <a href="##">위키백과</a>
                 </div>
             </div>
         </div>
     </section>
+
+
+
 
 </body>
 </html>

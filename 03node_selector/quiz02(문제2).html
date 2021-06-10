@@ -10,7 +10,6 @@
 
     <!-- 비밀번호 or 아이디가 변경될때 마다 예시화면처럼 구현하세요 -->
     <!-- border-color속성과 innerHTML으로 처리 -->
-
     <section>
         <form>
             <label>아이디</label>
@@ -28,31 +27,33 @@
         var id = document.getElementById("id");
         id.onkeyup = function() {
 
-            if(id.value.length < 4) {
+            if(id.value.length  < 4) {
                 id.style.borderColor = "red";
                 idMsg.innerHTML = "아이디는 4글자 이상입니다";
-            } else { 
+            } else {
                 id.style.borderColor = "green";
                 idMsg.innerHTML = "";
             }
-
         }
 
         //
         var pwMsg = document.querySelector(".pwMsg");
         var pw = document.getElementById("pw");
         pw.onkeyup = function() {
-            if(pw.value.length < 8){
+            if(pw.value.length < 8) {
                 pw.style.borderColor = "red";
-                pwMsg.innerHTML = "비밀번호는 8글자 이상입니다,";
+                pwMsg.innerHTML = "비밀번호는 8글자 이상입니다";
             } else {
-                pw.style.bordercolor = "green";
-                pwMsg.innerHTML = ""
+                pw.style.borderColor = "green";
+                pwMsg.innerHTML = "";
             }
         }
 
 
     </script>
+    
+
+
 
 </body>
 </html>
